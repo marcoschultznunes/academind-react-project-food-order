@@ -1,4 +1,5 @@
 import { FC } from "react";
+import CartButton from "./CartButton";
 import './Navbar.css';
 
 const Navbar:FC<{}> = (props) => {
@@ -7,11 +8,7 @@ const Navbar:FC<{}> = (props) => {
         <ul>
             <li><h1>ReactMeals</h1></li>
             <li>
-                <button className="cart-button">
-                    {/* icon */}
-                    <span>Your Cart</span>
-                    <span className="cart-button-quantity">4</span>
-                </button>
+                <CartButton />
             </li>
         </ul>
     </nav>;
