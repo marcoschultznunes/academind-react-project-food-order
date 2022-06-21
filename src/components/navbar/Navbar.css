@@ -11,3 +11,14 @@
     font-size: 2rem;
     padding: var(--margin-half) 0;
 }
+
+@media screen and (max-width: 600px) {
+    .main-navbar ul {
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .main-navbar h1 {
+        font-size: 1.25rem;
+    }
+}
