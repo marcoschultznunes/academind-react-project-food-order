@@ -1,8 +1,31 @@
+:root {
+  --color-gray: #323132;
+  --color-darkgray: #262526;
+  --color-primary: #7f2607;
+  --color-primary-light: #b13b18;
+  --color-primary-dark: #441602;
+  --color-primary-darker: #21110b;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
 body {
+  background-color: var(--color-darkgray);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+button {
+  border: none;
+}
+button:hover {
+  cursor: pointer;
 }
