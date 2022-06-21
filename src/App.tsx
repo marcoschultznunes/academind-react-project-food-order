@@ -1,7 +1,10 @@
 import React from 'react';
+import Navbar from './components/navbar/Navbar';
 
 function App() {
-  return <h3>Hello There!</h3>;
+  return <React.Fragment> 
+    <Navbar />
+  </React.Fragment>;
 };
 
 export default App;
