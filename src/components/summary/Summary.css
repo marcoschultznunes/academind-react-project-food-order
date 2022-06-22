@@ -1,0 +1,25 @@
+.summary-container {
+  background-color: var(--color-darkgray);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  margin: 0 25vw;
+  margin-top: var(--margin-big);
+  padding: var(--margin-normal);
+  padding-bottom: var(--margin-half);
+  padding-top: 0;
+  text-align: center;
+}
+
+.summary-container h2 {
+  padding: var(--margin-normal) 0;
+}
+
+.summary-container p {
+  padding-bottom: var(--margin-half);
+}
+
+@media screen and (max-width: 550px) {
+  .summary-container {
+    margin: var(--margin-normal);
+  }
+}
