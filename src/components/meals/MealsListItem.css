@@ -12,6 +12,7 @@
   padding-bottom: 0;
 }
 
+/* Details */
 .meals-list-item-details > * {
   margin-bottom: var(--margin-tiny);
 }
@@ -24,5 +25,29 @@
 }
 .meals-list-item-details span {
   color: var(--color-primary-light);
+  font-size: 0.9rem;
   font-weight: bold;
+}
+
+/* Control */
+.meals-list-item-controls p {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+}
+.meals-list-item-controls div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.meals-list-item-controls button {
+  background-color: var(--color-primary-light);
+  border-radius: var(--margin-half);
+  color: #ffffff;
+  margin-top: var(--margin-small);
+  padding: 4px 16px;
+}
+.meals-list-item-controls button:hover {
+  background-color: var(--color-primary);
 }
