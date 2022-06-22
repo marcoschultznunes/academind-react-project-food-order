@@ -1,0 +1,28 @@
+.meals-list-item-container {
+  border-bottom: 1px solid var(--color-lightgray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--margin-half);
+  padding-bottom: var(--margin-half);
+}
+.meals-list-item-container:last-child{
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.meals-list-item-details > * {
+  margin-bottom: var(--margin-tiny);
+}
+.meals-list-item-details h3 {
+  font-size: 1rem;
+}
+.meals-list-item-details p {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+.meals-list-item-details span {
+  color: var(--color-primary-light);
+  font-weight: bold;
+}

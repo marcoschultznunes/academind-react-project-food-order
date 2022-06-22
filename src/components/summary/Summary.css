@@ -1,20 +1,20 @@
 .summary-container {
   background-color: var(--color-darkgray);
+  border-radius: var(--margin-half);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   color: #ffffff;
-  margin: 0 25vw;
-  margin-top: var(--margin-big);
-  padding: var(--margin-normal);
-  padding-bottom: var(--margin-half);
-  padding-top: 0;
+  margin: var(--margin-big) 25vw var(--margin-normal) 25vw;
+  padding: 0 var(--margin-normal) var(--margin-half) var(--margin-normal);
   text-align: center;
 }
 
 .summary-container h2 {
+  font-size: 1.5rem;
   padding: var(--margin-normal) 0;
 }
 
 .summary-container p {
+  font-size: 1rem;
   padding-bottom: var(--margin-half);
 }
 
