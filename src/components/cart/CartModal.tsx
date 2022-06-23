@@ -3,7 +3,11 @@ import { createPortal } from "react-dom";
 import "./CartModal.css";
 import CartItem from "./CartItem";
 
-const CartModal:FC = (props) => {
+type CartModalProps = {
+  closeCart: () => void;
+};
+
+const CartModal:FC <CartModalProps> = (props) => {
 
   return createPortal(
     <div className="cart-modal-container">
@@ -16,7 +20,7 @@ const CartModal:FC = (props) => {
           <h3>$0.00</h3>
         </div>
         <div className="cart-modal-controls">
-          <button className="cart-modal-close">Close</button>
+          <button className="cart-modal-close" onClick={props.closeCart}>Close</button>
           <button className="cart-modal-order">Order</button>
         </div>
       </div>
