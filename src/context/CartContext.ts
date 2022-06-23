@@ -6,13 +6,15 @@ type CartContextType = {
   addToCart: (mealId:string) => void;
   removeFromCart: (mealId:string) => void;
   getAmountInCart: (mealId:string) => number;
+  getTotalCartAmount: () => number;
 };
 
 const CartContext = React.createContext <CartContextType> ({
   cart: [],
   addToCart: () => {},
   removeFromCart: () => {},
-  getAmountInCart: () => 0
+  getAmountInCart: () => 0,
+  getTotalCartAmount: () => 0
 });
 
 export default CartContext;
