@@ -20,10 +20,17 @@ function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   const addToCart = (mealId:string) => {
-    // cart.find(ci => ci.meal.id === mealId)
+    const i = cart.findIndex(ci => ci.mealId === mealId);
+    if(i === -1) {  // If meal is not in cart, it is added as a new cart item
+      setCart(prevCart => [...prevCart, new CartItem(mealId, 1)]);
+    } 
+    else {  // Else the existing cart item amount is incremented
+      cart[i].amount++;
+      setCart(prevCart => cart);
+    }
   };
   const removeFromCart = (mealId:string) => {
-    
+
   };
 
   return <React.Fragment>

@@ -17,6 +17,9 @@
   margin: var(--margin-normal) 30vw;
   padding: var(--margin-half);
 }
+.cart-modal-empty-message {
+  margin-bottom: var(--margin-normal);
+}
 
 .cart-modal-total {
   display: flex;

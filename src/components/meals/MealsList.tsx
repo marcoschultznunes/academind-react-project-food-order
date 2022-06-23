@@ -8,7 +8,7 @@ const MealsList:FC = (props) => {
   
   const renderMeals = meals.length > 0 ? 
     meals.map(m => <MealsListItem 
-      key={m.id} meal-id={m.id} title={m.title} description={m.description} price={m.price}
+      key={m.id} mealId={m.id} title={m.title} description={m.description} price={m.price}
     />) :
     <h3>No meals available!</h3>
 

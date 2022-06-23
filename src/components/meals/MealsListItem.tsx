@@ -1,14 +1,21 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
+import CartContext from "../../context/CartContext";
 import "./MealsListItem.css";
 
 type MealsListItemProps = {
+    mealId: string
     title: string
     description: string
     price: number
 };
 
 const MealsListItem: FC<MealsListItemProps> = (props) => {
-    const { title, description, price } = props;
+    const { mealId, title, description, price} = props;
+    const {addToCart} = useContext(CartContext);
+
+    const clickHandler = () => {
+        addToCart(mealId);
+    }
 
     return <li className="meals-list-item-container">
         <div className="meals-list-item-details">
@@ -21,7 +28,7 @@ const MealsListItem: FC<MealsListItemProps> = (props) => {
                 <p>3 in Cart</p>
             </div>
             <div>
-                <button>+ Add</button>
+                <button onClick={clickHandler}>+ Add</button>
             </div>
         </div>
     </li>;

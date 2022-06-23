@@ -14,7 +14,7 @@ const CartItem:FC <CartItemProps> = (props) => {
     <div className="cart-item-details">
         <h3>{title}</h3>
         <div>
-          <span className="cart-item-price">${price}</span>
+          <span className="cart-item-price">${price.toFixed(2)}</span>
           <span className="cart-item-amount">x {amount}</span>
         </div>
     </div>

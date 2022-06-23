@@ -1,11 +1,9 @@
-import Meal from "./Meal";
-
 class CartItem {
-  meal:Meal;
-  amount:number
+  mealId:string;
+  amount:number;
 
-  constructor(meal:Meal, amount:number){
-    this.meal = meal;
+  constructor(mealId:string, amount:number){
+    this.mealId = mealId;
     this.amount = Math.floor(amount);
   };
 };
