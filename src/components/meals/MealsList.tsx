@@ -14,9 +14,6 @@ const MealsList:FC = (props) => {
 
   return <div className="meals-list-container">
     <ul>
-      {/* <MealsListItem title="Sushi" description="Finest fish and veggies" price={22.99} />
-      <MealsListItem title="Sushi" description="Finest fish and veggies" price={22.99} />
-      <MealsListItem title="Sushi" description="Finest fish and veggies" price={22.99} /> */}
       {renderMeals}
     </ul>
   </div>;

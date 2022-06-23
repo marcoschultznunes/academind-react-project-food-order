@@ -25,17 +25,26 @@ function App() {
       setCart(prevCart => [...prevCart, new CartItem(mealId, 1)]);
     } 
     else {  // Else the existing cart item amount is incremented
-      cart[i].amount++;
-      setCart(prevCart => cart);
+      const newCart = [...cart];  // Shallow copy to ensure re-render
+      newCart[i].amount++
+      setCart(newCart);
     }
   };
   const removeFromCart = (mealId:string) => {
 
   };
+  const getAmountInCart = (mealId:string) => {
+    const item = cart.find(i => i.mealId === mealId);
+    
+    if(item) {
+      return item.amount; 
+    }
+    return 0;  // Returns 0 if item not in cart
+  }
 
   return <React.Fragment>
     <MealsContext.Provider value={{meals}}>
-      <CartContext.Provider value={{cart, addToCart, removeFromCart}}>
+      <CartContext.Provider value={{cart, addToCart, removeFromCart, getAmountInCart}}>
         <Navbar />
         <Summary />
         <MealsList />

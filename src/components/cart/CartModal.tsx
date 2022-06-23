@@ -16,7 +16,9 @@ const CartModal:FC <CartModalProps> = (props) => {
   const renderCartItems = cart.length > 0 ? 
     cart.map(item => {
       const meal = meals.find(m => m.id === item.mealId);
-      return <CartItem title={meal!.title} price={meal!.price} amount={item.amount} />;
+      return <CartItem 
+        key={item.mealId} title={meal!.title} price={meal!.price} amount={item.amount} 
+      />;
     }) :
     <h3 className="cart-modal-empty-message">Cart is empty!</h3>
 

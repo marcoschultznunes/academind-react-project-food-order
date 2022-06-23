@@ -11,11 +11,14 @@ type MealsListItemProps = {
 
 const MealsListItem: FC<MealsListItemProps> = (props) => {
     const { mealId, title, description, price} = props;
-    const {addToCart} = useContext(CartContext);
+    const {addToCart, getAmountInCart} = useContext(CartContext);
 
     const clickHandler = () => {
         addToCart(mealId);
     }
+
+    const amount = getAmountInCart(mealId)
+    const renderAmountMessage =  amount > 0 ? <p>{amount} in Cart</p> : null
 
     return <li className="meals-list-item-container">
         <div className="meals-list-item-details">
@@ -25,7 +28,7 @@ const MealsListItem: FC<MealsListItemProps> = (props) => {
         </div>
         <div className="meals-list-item-controls">
             <div>
-                <p>3 in Cart</p>
+                {renderAmountMessage}
             </div>
             <div>
                 <button onClick={clickHandler}>+ Add</button>
