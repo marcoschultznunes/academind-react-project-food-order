@@ -31,7 +31,16 @@ function App() {
     }
   };
   const removeFromCart = (mealId:string) => {
-
+    const i = cart.findIndex(ci => ci.mealId === mealId);
+    if(i !== -1){
+      if(cart[i].amount === 1){
+        setCart(prevCart => prevCart.filter(i => i.mealId !== mealId));
+      } else {
+        const newCart = [...cart]; 
+        newCart[i].amount--;
+        setCart(newCart);
+      }
+    }
   };
   const getAmountInCart = (mealId:string) => {
     const item = cart.find(i => i.mealId === mealId);

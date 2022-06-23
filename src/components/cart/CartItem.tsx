@@ -1,14 +1,24 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
+import CartContext from "../../context/CartContext";
 import "./CartItem.css";
 
 type CartItemProps = {
+  mealId: string;
   title: string;
   price: number;
   amount: number;
 };
 
 const CartItem:FC <CartItemProps> = (props) => {
-  const {title, price, amount} = props
+  const {mealId, title, price, amount} = props
+  const {addToCart, removeFromCart} = useContext(CartContext);
+
+  const addClickHandler = () => {
+    addToCart(mealId);
+  }
+  const removeClickHandler = () => {
+    removeFromCart(mealId);
+  }
 
   return <div className="cart-item-container">
     <div className="cart-item-details">
@@ -19,8 +29,8 @@ const CartItem:FC <CartItemProps> = (props) => {
         </div>
     </div>
     <div className="cart-item-controls">
-      <button>&ndash;</button>
-      <button>+</button>
+      <button onClick={removeClickHandler}>&ndash;</button>
+      <button onClick={addClickHandler}>+</button>
     </div>
   </div>;
 };
