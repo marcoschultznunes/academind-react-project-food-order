@@ -14,7 +14,7 @@ const MealsListItem: FC<MealsListItemProps> = (props) => {
         <div className="meals-list-item-details">
             <h3>{title}</h3>
             <p>{description}</p>
-            <span>${price}</span>
+            <span>${price.toFixed(2)}</span>
         </div>
         <div className="meals-list-item-controls">
             <div>
