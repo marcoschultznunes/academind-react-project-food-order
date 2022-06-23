@@ -7,6 +7,7 @@ type CartContextType = {
   removeFromCart: (mealId:string) => void;
   getAmountInCart: (mealId:string) => number;
   getTotalCartAmount: () => number;
+  getCartValue: () => number;
 };
 
 const CartContext = React.createContext <CartContextType> ({
@@ -14,7 +15,8 @@ const CartContext = React.createContext <CartContextType> ({
   addToCart: () => {},
   removeFromCart: () => {},
   getAmountInCart: () => 0,
-  getTotalCartAmount: () => 0
+  getTotalCartAmount: () => 0,
+  getCartValue: () => 0
 });
 
 export default CartContext;

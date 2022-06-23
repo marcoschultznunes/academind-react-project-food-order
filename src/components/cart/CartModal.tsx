@@ -11,7 +11,7 @@ type CartModalProps = {
 
 const CartModal:FC <CartModalProps> = (props) => {
   const {meals} = useContext(MealsContext);
-  const {cart} = useContext(CartContext);
+  const {cart, getCartValue} = useContext(CartContext);
 
   const renderCartItems = cart.length > 0 ? 
     cart.map(item => {
@@ -29,7 +29,7 @@ const CartModal:FC <CartModalProps> = (props) => {
         {renderCartItems}
         <div className="cart-modal-total">
           <h3>Total Amount</h3>
-          <h3>$0.00</h3>
+          <h3>${getCartValue()}</h3>
         </div>
         <div className="cart-modal-controls">
           <button className="cart-modal-close" onClick={props.closeCart}>Close</button>

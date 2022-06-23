@@ -4,8 +4,6 @@ import Meal from './models/Meal';
 import Navbar from './components/navbar/Navbar';
 import Summary from './components/summary/Summary';
 import MealsContext from './context/MealsContext';
-import CartContext from './context/CartContext';
-import CartItem from './models/CartItem';
 import CartContextProvider from './context/CartContextProvider';
 
 // Will be replaced with an useEffect fetching the meals
