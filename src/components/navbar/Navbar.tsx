@@ -8,12 +8,12 @@ const Navbar:FC<{}> = (props) => {
 
     const openCart = () => {
         setCartOpened(true);
-    }
+    };
     const closeCart = () => {
         setCartOpened(false);
-    }
+    };
 
-    const renderCart = cartOpened ? <CartModal closeCart={closeCart} /> : null
+    const renderCart = cartOpened ? <CartModal closeCart={closeCart} /> : null;
 
     return <nav className="main-navbar">
         <ul>

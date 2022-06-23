@@ -5,7 +5,7 @@ import "./CartButton.css";
 
 type CartButtonProps = {
   openCart: () => void;
-}
+};
 
 const CartButton: FC<CartButtonProps> = (props) => {
   return <button className="cart-button" onClick={props.openCart}>
