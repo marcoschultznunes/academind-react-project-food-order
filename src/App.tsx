@@ -11,7 +11,13 @@ const mealsList = [
   new Meal('m1', 'Sushi', 'Finest fish and veggies', 22.99),
   new Meal('m2', 'Schnitzel', 'A german specialty!', 16.5),
   new Meal('m3', 'Barbecue Burger', 'From the USA, raw, meaty', 12.99),
-  new Meal('m4', 'Green Bowl', 'Healthy...and green...', 18.99)
+  new Meal('m4', 'Green Bowl', 'Healthy...and green...', 18.99),
+  new Meal('m5', 'Sushi', 'Finest fish and veggies', 22.99),
+  new Meal('m6', 'Sushi', 'Finest fish and veggies', 22.99),
+  new Meal('m7', 'Sushi', 'Finest fish and veggies', 22.99),
+  new Meal('m8', 'Sushi', 'Finest fish and veggies', 22.99),
+  new Meal('m9', 'Sushi', 'Finest fish and veggies', 22.99),
+  new Meal('m10', 'Sushi', 'Finest fish and veggies', 22.99),
 ];
 
 function App() {
