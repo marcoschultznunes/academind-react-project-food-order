@@ -9,14 +9,12 @@ type CartButtonProps = {
 };
 
 const CartButton: FC<CartButtonProps> = (props) => {
-  const {cart} = useContext(CartContext);
-
-  const totalCartAmount = cart.reduce((acc, i) => acc + i.amount, 0);
+  const {getTotalCartAmount} = useContext(CartContext);
 
   return <button className="cart-button" onClick={props.openCart}>
     <FontAwesomeIcon icon={faCartShopping} className="cart-button-icon" />
     <span>Your Cart</span>
-    <span className="cart-button-quantity">{totalCartAmount}</span>
+    <span className="cart-button-quantity">{getTotalCartAmount()}</span>
   </button>;
 };
 

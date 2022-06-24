@@ -13,9 +13,11 @@ const CartModal:FC <CartModalProps> = (props) => {
   const {meals} = useContext(MealsContext);
   const {cart, getCartValue} = useContext(CartContext);
 
+  // Mapping the cart items
   const renderCartItems = cart.length > 0 ? 
     cart.map(item => {
-      const meal = meals.find(m => m.id === item.mealId);
+      const meal = meals.find(m => m.id === item.mealId);  // Getting the meal with the mealId
+      
       return <CartItem 
         key={item.mealId} mealId={item.mealId} title={meal!.title} price={meal!.price} 
         amount={item.amount} 

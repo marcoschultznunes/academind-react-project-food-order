@@ -7,6 +7,7 @@
   margin-bottom: var(--margin-half);
 }
 
+/* Details */
 .cart-item-details > * {
   margin-bottom: var(--margin-tiny);
 }
@@ -27,6 +28,7 @@
   padding: 4px 8px;
 }
 
+/* Controls */
 .cart-item-controls button {
   background-color: #ffffff;
   border: 1px solid var(--color-primary-light);

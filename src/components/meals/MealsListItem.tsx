@@ -15,10 +15,13 @@ const MealsListItem: FC<MealsListItemProps> = (props) => {
 
     const clickHandler = () => {
         addToCart(mealId);
-    }
+    };
 
-    const amount = getAmountInCart(mealId)
-    const renderAmountMessage =  amount > 0 ? <p>{amount} in Cart</p> : null
+    // Displaying the amount of the item in cart
+    const amount = getAmountInCart(mealId);
+    const renderAmountMessage =  amount > 0 ? 
+        <p>{amount} in Cart</p> : 
+        <p> Not in cart </p>;
 
     return <li className="meals-list-item-container">
         <div className="meals-list-item-details">

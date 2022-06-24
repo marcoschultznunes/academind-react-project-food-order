@@ -6,10 +6,13 @@ import MealsListItem from "./MealsListItem";
 const MealsList:FC = (props) => {
   const {meals} = useContext(MealsContext);
   
+  // Mapping the meal items
   const renderMeals = meals.length > 0 ? 
-    meals.map(m => <MealsListItem 
-      key={m.id} mealId={m.id} title={m.title} description={m.description} price={m.price}
-    />) :
+    meals.map(m => 
+      <MealsListItem 
+        key={m.id} mealId={m.id} title={m.title} description={m.description} price={m.price}
+      />
+    ):
     <h3>No meals available!</h3>
 
   return <div className="meals-list-container">
